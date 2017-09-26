@@ -1,47 +1,41 @@
-@font-face {
-	font-family: WheelofFortune;
-	src: url(css/wheel-of-fortune/SF Fortune Wheel.ttf);
-}
-
-
 .game {
 	background-color: #E3E9D3;
 	margin: 0 auto;
 	text-align: center;
 }
 
-#header {
+.header {
 	font-family: WheelofFortune;
 	font-size: 3.0em;
 }
 
-#puzzleBoard {
+.puzzleBoard {
 	font-size: 2em;
 	padding: 20px;
 }
 
-#spin {
+.spin {
   width: 150px;
   font-size: 1em;
   border-radius: 10px;
   cursor: pointer;
 }
 
-#vowel {
+.vowel {
   width: 150px;
   font-size: 1em;
   border-radius: 10px;
   cursor: pointer;
 }
 
-#solve {
+.solve {
   width: 150px;
   font-size: 1em;
   border-radius: 10px;
   cursor: pointer;
 }
 
-#newGame {
+.newGame {
   width: 150px;
   font-size: 1em;
   border-radius: 10px;
@@ -53,6 +47,32 @@
 	font-size: 1.5em;
 }
 
-#player1 {
+.player1 {
 	float: left;
 }
+
+/* This styling sets the position of the wheel.  The margin is what centers it.
+// The webkit for the animation was found on stackoverflow.  It makes the wheel spin.
+// 
+// The webkit for transition was found from codepen.  It creates the circle border on the wheel.  
+
+*/
+
+.spinWheel {
+	top: 0;
+	left: 0;
+    margin: 0 auto;
+    -webkit-animation:spin 24s linear;
+    -moz-animation:spin 24s linear;
+     animation:spin 24s linear;
+    -moz-border-radius: 250px;
+    -webkit-border-radius: 250px;
+     border-radius: 250px;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -moz-transition: -moz-transform 0.5s linear;
+    -opera-transition: -opera-transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
