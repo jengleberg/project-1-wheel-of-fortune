@@ -11,7 +11,7 @@
 
 .puzzleBoard {
 	font-size: 2em;
-	padding: 20px;
+	padding: 2px;
 }
 
 .spin {
@@ -43,12 +43,63 @@
 }
 
 .players {
-	display: inline-block;
 	font-size: 1.5em;
+
 }
 
 .player1 {
-	float: left;
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	
+}
+
+.player2 {
+	position: absolute;
+	top: 100px;
+	right: 50px;
+}
+
+table {
+  margin:0px auto;
+}
+
+.tile, td {
+  background-color:#99CCFF;
+  /*border: 1px solid #CEC5AA;*/
+  height: 70px;
+  min-width: 60px;
+  text-align: center;
+  transition: transform 1s;
+  transform:rotateY(0deg);
+  font-size: 40px;
+}
+
+.hiddenTiles {
+  border:0px;
+  opacity: 0;
+}
+
+.blank-tile {
+  background-color: #01A1FF;
+  transform:rotateY(360deg);
+}
+
+.highlight {
+  background-color: #FF4133;
+  color: #FF4133;
+  transform:rotateY(180deg);
+  cursor: pointer;
+}
+
+
+#category {
+  height: 30px;
+  width: 600px;
+  margin: 10px auto;
+  background-color:#99CCFF;
+  font-size: 20px;
+  color:black;
 }
 
 /* This styling sets the position of the wheel.  The margin is what centers it.
@@ -59,12 +110,12 @@
 */
 
 .spinWheel {
-	top: 0;
-	left: 0;
+	  top: 0;
+	  left: 0;
     margin: 0 auto;
-    -webkit-animation:spin 24s linear;
-    -moz-animation:spin 24s linear;
-     animation:spin 24s linear;
+    -webkit-animation:spin 2s linear;
+    -moz-animation:spin 2s linear;
+     animation:spin 2s linear;
     -moz-border-radius: 250px;
     -webkit-border-radius: 250px;
      border-radius: 250px;
@@ -73,6 +124,6 @@
     -opera-transition: -opera-transform 0.5s linear;
     -ms-transition: transform 0.5s linear;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(330deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(330deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(330deg); transform:rotate(360deg); } }

@@ -8,50 +8,96 @@
 
 <div class="game">
 	<h1 class="header">Wheel of Fortune</h1>
-	<div class="puzzleBoard">This is where the puzzle board will load.  I am typing a bunch of words in here to make sure my css is setup correctly before I create my various puzzles.</div>
-
-	
 	<div class="players">
 		<div class="player1">Player 1
 			<div class="player1Score">Game Total: $<span class="player1GameMoney">0</span></div>
 			<div class="player1Bank">Total Won: $<span class="player1TotalMoney">0</span></div>
 		</div>
-	<div id="player2">Player 2
+	<div class="player2">Player 2
 			<div class="player2Score">Game Total: $<span class="player2GameMoney">0</span></div>
 			<div class="player2Bank">Total Won: $<span class="player2TotalMoney">0</span></div>
 		</div>
+	<div class="answers">
+		<table>
+      <tbody>
+        <tr>
+          <td class="hiddenTiles"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="tile r1"></td>
+          <td class="hiddenTiles"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td class="tile r2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td class="tile r3"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="hiddenTiles"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="hiddenTiles"></td>
+        </tr>
+      </tbody>
+    </table>
+
+	<div class=category></div>
+
+	</div>
+
+	</div>
+	
 	<div class="wheelTicker">|</div>
-	<img class="spinWheel" src="Images/Spin-Wheel.jpg" data-rotation="0">
+	<img class="spinWheel" value='spin' src="Images/Spin-Wheel.jpg" data-rotation="0">
 	<div class="gameControls">
 		<button class="spin">Spin Wheel</button>
 		<button class="vowel">Buy a Vowel</button>
 		<button class="solve">Solve Puzzle</button>
 		<button class="newGame">New Game</button>
-	
-		
-
-		</div>
-
 	</div>
 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
+	
 <script src="scripts/app.js"></script>
+
+
+
 </body>
 </html>
