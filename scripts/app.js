@@ -1,12 +1,15 @@
 
-//create the puzzles. randomly selects one at the start. //
+//create the puzzles.  //
 var puzzles = ["javascript", "wheel", "colorado", "baseball"];
 
-// stores the current puzzle //
+// creates variable for game puzzle //
 var puzzle = "";
 
 // stores the answers //
 var answers = [];
+
+// vowels array //
+var vowels = ["A", "E", "I", "O", "U"];
 
 //Wheel Amounts and Prize return //
 // -1 is for lose turn and 0 is for bankrupt // 
@@ -22,17 +25,7 @@ var roundScore = [0,0];
 var round = 1;
 var buyVowel = false;
 
-// Get elements from html //
 
-var puzzleBoard = document.getElementsByClassName[puzzleBoard];
-var puzzleRows = puzzleBoard.length;
-var player1 = document.getElementsByClassName('player1');
-var player2 = document.getElementsByClassName('player2');
-var player1Score = document.getElementsByClassName('player1GameMoney');
-var player2Score = document.getElementsByClassName('player2GameMoney');
-var player1Bank = document.getElementsByClassName('player1TotalMoney');
-var player2Bank = document.getElementsByClassName('player2TotalMoney');
-var playerScore = { round: [player1Score, player2Score], game: [player1Bank, player2Bank]};	
 
 
 
@@ -52,20 +45,24 @@ function init() {
 
 init();
 
+
+
 function guessOne() {
 	// Get a guess from the player //
 	var guess = document.getElementById("guess").value;
-	var showThisMessage = "";
+	showThisMessage = "";
 	// warning if more than one letter is entered //
 	if (guess.length !== 1) {
-		showThisMessage = "Please enter only a single letter";
+		document.getElementById("message").innerHTML = ("Please enter only a single letter");
 	} else {
 		// Update the game with the guess //
 		var i=0;  // This places an index into the game //
 		for (var i = 0; i < puzzle.length; i++) {
 			if (guessedLetters[i] === guess) {
 				answers[i] = guess;
-				showThisMessage = "YES! + 'guess' + is in the answer";
+				document.getElementById("message").innerHTML = ("YES!" + " " + guess + " is in the answer");
+			} else {
+				document.getElementById("message").innerHTML = ("NO!" + " " + guess + " is not in the answer");
 			}
 		}
 		var remainingLetters = 0;
@@ -76,10 +73,10 @@ function guessOne() {
 			}
 		}
 		if (remainingLetters == 0) {
-			showThisMessage = "YES! You solved the puzzle!";
+			document.getElementById("message").innerHTML = "YES! You solved the puzzle!";
 		}
 		if (showThisMessage === "") {
-			showThisMessage = "Sorry, no + 'guess' ";
+			document.getElementById("message").innerHTML = "YES! You solved the puzzle!";
 		}
 
 		document.getElementById("answer").innerHTML = answers.join(" ");
@@ -91,13 +88,7 @@ function guessOne() {
 
 //creates function to return random amount
 
-function spinAmount () {
-	 return wheelValues[Math.floor((Math.random()*wheelValues.length))];
-}
 
-// Spin Wheel //
-
-var spinWheel = document.getElementsByClassName('spin')[0]
 
 
 
@@ -117,7 +108,7 @@ var spinWheel = document.getElementsByClassName('spin')[0]
  //}
 
 
-}
+
 
 
 

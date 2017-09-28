@@ -17,77 +17,19 @@
 			<div class="player2Score">Game Total: $<span class="player2GameMoney">0</span></div>
 			<div class="player2Bank">Total Won: $<span class="player2TotalMoney">0</span></div>
 		</div>
-	<div class="answers">
-		<table>
-      <tbody>
-        <tr>
-          <td class="hiddenTiles"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="tile r1"></td>
-          <td class="hiddenTiles"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td class="tile r2"></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td class="tile r3"></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="hiddenTiles"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="hiddenTiles"></td>
-        </tr>
-      </tbody>
-    </table>
 
-	<div class=category></div>
+	<p>
+<font size="+3"><span id="answer">puzzle loading..</span></font>
+</p>
 
-	</div>
 
-	</div>
-	
-	<div class="wheelTicker">|</div>
+
+  <div class="wheelTicker">|</div>
 	<img class="spinWheel" value='spin' src="Images/Spin-Wheel.jpg" data-rotation="0">
 	<div class="gameControls">
+     <input id="guess" type="text"> 
+     <input type="button" value="guess"   onclick="guessOne()"/>
+    <p id="message">&nbsp;</p>
 		<button class="spin">Spin Wheel</button>
 		<button class="vowel">Buy a Vowel</button>
 		<button class="solve">Solve Puzzle</button>

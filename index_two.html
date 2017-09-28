@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <head>
-	<title>Game</title>
+	<title>Guess the Word</title>
 </head>
 <body>
 <h1>Wheel of Fortune!</h1>
+Type a letter (then press guess)
+<input id="guess" type="text">
+<input type="button" value="guess" onclick="guessOne()">
+<input type="button" value="quit" onClick="quit()"/>
+<p id="message">&nbsp;</p>
 <p>
 <font size="+3"><span id="answer">puzzle loading..</span></font>
 </p>
-<input id="guess" type="text"> 
-<input type="button" value="guess"   onclick="guessOne()"/>
-<input type="button" value="quit" onclick="quit()"/>
-<p id="message">&nbsp;</p>
+<div class="wheelTicker">|</div>
+  <img  id="img" src="Images/Spin-Wheel.jpg" data-rotation="0">
+
+    <div id="players">
+      <div class="player-box">
+        <input id="p1name" class="nameInput" placeholder="Player 1 Name"></input>
+        <div id="p1score">0</div>
+        <div id="p1bank">0</div>
+      </div>
+      <div class="player-box">
+        <input id="p2name" class="nameInput" placeholder="Player 2 Name"></input>
+        <div id="p2-score">0</div>
+        <div id="p2-bank">0</div>
+      </div>
+    </div>
+
+  <div class="gameControls">
+     <input type="button" name="Spin Wheel" onclick="spin()">
+     <button id="vowel">Buy a Vowel</button>
+     <button id="solve">Solve Puzzle</button>
+     <button id="newGame">New Game</button>
+  </div>
+
 
 <script src="scripts/js_two.js"></script>
 
