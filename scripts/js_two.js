@@ -10,6 +10,7 @@ var p1GameScore = document.getElementById("p1bank");
 var p2GameScore = document.getElementById("p2bank");
 var solvePuzzle = document.getElementById("solve");
 var newGame = document.getElementById("newGame");
+var guessButton = document.getElementById("guessButton");
 
 
 // Game Variables
@@ -20,9 +21,11 @@ var answers = [];
 var player1 = prompt("Type your name");
 var player2 = prompt("Type your name");
 var currentPlayer = player1;
-var p1Score = 0;
-var p2Score = 0;
+var pScore = {p1RoundScore: 0, p2RoundScore: 0};
 var round = 1;
+var prize = "";
+
+
 
 // Spin Results
 
@@ -31,16 +34,16 @@ spinValues = ['LoseTurn', '800', '350', '450', '700', '300', '600', '5000', '300
 
 // Function that pulls a random value from the spinValues array
 
-SpinAmount = function () {
+ function spinAmount() {
 	 return spinValues[Math.floor((Math.random()*spinValues.length))];
-};
+}
 
 // Event Listener when spin button is clicked to return the spin amount.
 
-spin.addEventListener('click', function() {
-	var prize = SpinAmount();
-	alert(prize);
-});
+spin.addEventListener('click', spinAmount() );
+	
+	
+
 
 
 
@@ -65,11 +68,11 @@ function init() {
 
 init();
 
-var prize = SpinAmount();
+
 
 // function that allows player to guess the letter
 
-function guessOne() {
+guessButton.addEventListener("click", function() {
 	var guess = document.getElementById("guess").value;
 	var showThisMessage = "";
 	if (guess.length === 0) {
@@ -85,7 +88,7 @@ function guessOne() {
 			if (puzzle[i] === guess) {
 				answers[i] = guess;
 				showThisMessage= "YES! Vanna, show us " + guess + ".";
-
+				pScore.innerHTML=prize;
 				
 			} 
 				
@@ -115,11 +118,11 @@ function guessOne() {
 		document.getElementById("guess").innerHTML = showThisMessage;
 		}
 		document.getElementById("message").innerHTML = showThisMessage;
-	}
+	
 
 
 
-
+});
 
 
 function nextPlayer() {
@@ -134,7 +137,7 @@ function nextPlayer() {
 
 function updateScore (prize, numGuess, Bankrupt) {
 	if(Bankrupt) {
-		
+
 	}
 }
 
