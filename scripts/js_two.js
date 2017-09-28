@@ -17,8 +17,11 @@ var newGame = document.getElementById("newGame");
 var puzzles = ["javascript", "function", "general-assembly", "prototype", "binary", "psuedocode"];
 var puzzle = "";
 var answers = [];
-var currentPlayer = 0;
-var gameScore = 0;
+var player1 = prompt("Type your name");
+var player2 = prompt("Type your name");
+var currentPlayer = player1;
+var p1Score = 0;
+var p2Score = 0;
 var round = 1;
 
 // Spin Results
@@ -26,19 +29,21 @@ var round = 1;
 spinValues = ['LoseTurn', '800', '350', '450', '700', '300', '600', '5000', '300', '600',
 				'300', '500', '800', '550', '400', '300', '900', '500', '300', '900', 'Bankrupt', '600', '400', '300'];
 
-
-
-
-
 // Function that pulls a random value from the spinValues array
 
 SpinAmount = function () {
 	 return spinValues[Math.floor((Math.random()*spinValues.length))];
 };
 
+// Event Listener when spin button is clicked to return the spin amount.
+
 spin.addEventListener('click', function() {
-	alert(SpinAmount());
+	var prize = SpinAmount();
+	alert(prize);
 });
+
+
+
 
 // Function that initializes the game by randomly choosing a puzzle from the puzzles array
 
@@ -55,25 +60,33 @@ function init() {
     document.getElementById("message").innerHTML= "Let's play";
 }
 
-var p1RoundScore = 0;
-var p2RoundScore = 0;
+
+
 
 init();
 
+var prize = SpinAmount();
 
 // function that allows player to guess the letter
 
 function guessOne() {
 	var guess = document.getElementById("guess").value;
 	var showThisMessage = "";
-	if (guess.length !== 1) {
+	if (guess.length === 0) {
+		showThisMessage = "Please enter a letter";
+	}
+	else if (guess.length !== 1) {
 		showThisMessage = "Please enter only a single letter";
+	
+
 	} else {
-		var i = 0;
+		
 		for (var i = 0; i < puzzle.length; i++) {
 			if (puzzle[i] === guess) {
 				answers[i] = guess;
 				showThisMessage= "YES! Vanna, show us " + guess + ".";
+
+				
 			} 
 				
 		}
@@ -89,8 +102,12 @@ function guessOne() {
 		} 
 
 		if (showThisMessage === "") {
-			showThisMessage = "Sorry, no " + guess;
+			showThisMessage = "Sorry, no " + guess + " " + currentPlayer + " Your turn";
 			nextPlayer();
+			
+
+			
+
 		} 
 
 		document.getElementById("answer").innerHTML = answers.join(" ");
@@ -100,18 +117,24 @@ function guessOne() {
 		document.getElementById("message").innerHTML = showThisMessage;
 	}
 
-function currPlayerName() {
-	playerNames = [p1Name.val(), p2Name.val()];
-	return playerNames[currentPlayer];
 
+
+
+
+
+function nextPlayer() {
+  if (currentPlayer == player1) {
+  	currentPlayer = player2;
+  } else {
+  	currentPlayer = player1;
+
+  }
 
 }
 
-function nextPlayer() {
-  if(currentPlayer === 1) {
-    currentPlayer = 0;
-  } else {
-    currentPlayer++;
-  }
+function updateScore (prize, numGuess, Bankrupt) {
+	if(Bankrupt) {
+		
+	}
 }
 
