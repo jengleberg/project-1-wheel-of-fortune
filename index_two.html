@@ -2,14 +2,14 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <head>
-	<title>Guess the Word</title>
+	<title>Wheel of Fortune</title>
 </head>
-<body>
-<h1>Wheel of Fortune!</h1>
-Type a letter (then press guess)
+<body>  
+<div class="game">
+<h1 class="header">Wheel of Fortune!</h1>
+<div id="instructions">Type a letter (then press guess)
 <input id="guess" type="text">
-<input type="button" value="guess" onclick="guessOne()">
-<input type="button" value="quit" onClick="quit()"/>
+<input type="button" value="Guess" onclick="guessOne()">
 <p id="message">&nbsp;</p>
 <p>
 <font size="+3"><span id="answer">puzzle loading..</span></font>
@@ -31,12 +31,12 @@ Type a letter (then press guess)
     </div>
 
   <div class="gameControls">
-     <input type="button" name="Spin Wheel" onclick="spin()">
+     <button type="button" id="spin" >Spin Wheel</button>
      <button id="vowel">Buy a Vowel</button>
      <button id="solve">Solve Puzzle</button>
      <button id="newGame">New Game</button>
   </div>
-
+</div>  
 
 <script src="scripts/js_two.js"></script>
 
