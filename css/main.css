@@ -1,17 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Changa+One);
+
 .game {
-    background-color: #E3E9D3;
+    font-family:'Changa One' serif;
     margin: 0 auto;
     text-align: center;
 }
 
 .header {
-    font-family: WheelofFortune;
-    font-size: 3.0em;
+    background-image: url(images/header.png);
 }
 
 #guess {
     font-size: 2em;
     padding: 2px;
+}
+
+.instructions {
+    font-size: 2em;
+}
+
+#answer {
+    background-color: #43759f;
+    padding: 1em 2em;
+    text-align: center;
+    border-radius: 40px;
+    border: 4px double #fff;
+    
 }
 
 .spin {
@@ -80,28 +94,23 @@
 
 */
 
-img {
-     -moz-border-radius: 250px;
+
+
+}
+.wheel {
+    top: 0;
+    left: 0;
+    width: 500px;
+    -moz-border-radius: 250px;
     -webkit-border-radius: 250px;
-     border-radius: 250px;
+    border-radius: 250px;
     -webkit-transition: -webkit-transform 0.5s linear;
     -moz-transition: -moz-transform 0.5s linear;
     -opera-transition: -opera-transform 0.5s linear;
     -ms-transition: transform 0.5s linear;
 }
-
-.spinWheel {
-	  
-    margin: 0 auto;
-    -webkit-animation:spin 2s linear;
-    -moz-animation:spin 2s linear;
-     animation:spin 2s linear;
-
+.wheelticker {
+    margin-left: 244px;
+    font-family: Arial;
+    font-size: 45pt;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); }
- }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
-}
-

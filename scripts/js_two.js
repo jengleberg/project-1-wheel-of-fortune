@@ -18,8 +18,8 @@ var guessButton = document.getElementById("guessButton");
 var puzzles = ["javascript", "function", "general-assembly", "prototype", "binary", "psuedocode"];
 var puzzle = "";
 var answers = [];
-var player1 = prompt("Type your name");
-var player2 = prompt("Type your name");
+var player1 = "";
+var player2 = "";
 var currentPlayer = player1;
 var pScore = {p1RoundScore: 0, p2RoundScore: 0};
 var round = 1;
@@ -40,7 +40,9 @@ spinValues = ['LoseTurn', '800', '350', '450', '700', '300', '600', '5000', '300
 
 // Event Listener when spin button is clicked to return the spin amount.
 
-spin.addEventListener('click', spinAmount() );
+spin.addEventListener('click', function() {
+	alert(spinAmount());
+});
 	
 	
 
