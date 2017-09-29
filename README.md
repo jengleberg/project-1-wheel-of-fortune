@@ -25,6 +25,7 @@ This Wheel of Fortune Game was designed using HTML, CSS and vanilla JS.
 Unsolved problems
 
 1. Spinning Wheel Logic: Get wheel to spin on click. (This was working, but I broke it attempting to get the prize logic in place.)
+3. Clear the guess input field upon each guess and ensure both upper and lower case letters are accepted.
 2. Return the matching prize based on the spinning wheel end position. Ideally using canvs wheel drawing.
 3. Store the prize amount and add it to the players score, multiplied by the number of correct letters.
 4. Create buy vowel logic that will reduce the players score for each vowel purchased.
