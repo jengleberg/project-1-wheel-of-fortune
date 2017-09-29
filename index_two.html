@@ -8,18 +8,30 @@
   <div class="game">
 <h1 class="header">
   <img src="Images/header.png">
+  <p id="message">&nbsp;</p>
 </h1>
 <div class="wheelArea">
-<div class="wheelTicker">⇩</div>
+ <div class="wheelTicker">⇩</div>
   <img  id="wheel" src="Images/Spin-Wheel.jpg" data-rotation="0">
   </div>
-<div id="instructions">Type a letter (then press guess)
+   <div class="gameControls">
+     <button type="button" id="spin" >Spin Wheel</button>
+     <button id="vowel">Buy a Vowel</button>
+     <button id="solve">Solve Puzzle</button>
+     <button id="newGame">New Game</button>
+  </div>
+  
+  <div class="board">
+    <div class="guessBoard">
+<div id="instructions">TYPE YOUR LETTER AND PRESS GUESS</div>
 <input id="guess" type="text">
-<button type="button" id="guessButton">Guess Letter</button>
-<p id="message">&nbsp;</p>
+<button type="button" id="guessButton">Guess</button>
+</div>
 <p>
 <font size="+3"><span id="answer">puzzle loading..</span></font>
 </p>
+</div>
+
 
 
     <div id="players">
@@ -35,12 +47,7 @@
       </div>
     </div>
 
-  <div class="gameControls">
-     <button type="button" id="spin" >Spin Wheel</button>
-     <button id="vowel">Buy a Vowel</button>
-     <button id="solve">Solve Puzzle</button>
-     <button id="newGame">New Game</button>
-  </div>
+ 
 </div>  
 
 <script src="scripts/js_two.js"></script>

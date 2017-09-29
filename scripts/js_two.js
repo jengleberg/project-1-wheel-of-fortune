@@ -62,7 +62,7 @@ function init() {
 }
 
 	document.getElementById("answer").innerHTML= answers.join(" ");
-    document.getElementById("message").innerHTML= "Let's play";
+    document.getElementById("message").innerHTML= "LET'S PLAY!";
 }
 
 
