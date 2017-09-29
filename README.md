@@ -48,6 +48,7 @@ Conclusion
 This project was much more difficult than I anticipated it would be as I did not properly plan out all of the needed steps that would constitute a working wheel of fortune game.  I did learn a lot and am excited to finish this game to it's completion.  Practice for me needs to focus on CSS positioning, and writing javascript functions.  
 
 
-
+End of Week Finished Product
+![Final](https://i.imgur.com/IGcvYVP.png)
 
 
