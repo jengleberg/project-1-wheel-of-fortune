@@ -2,102 +2,18 @@
 
 .game {
     font-family:'Changa One' serif;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .header {
-    background-image: url(images/header.png);
-}
-
-#guess {
-    font-size: 2em;
-    padding: 2px;
-}
-
-.instructions {
-    font-size: 2em;
-}
-
-#answer {
-    background-color: #43759f;
-    padding: 1em 2em;
     text-align: center;
-    border-radius: 40px;
-    border: 4px double #fff;
-    
 }
 
-.spin {
-  width: 150px;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
+.wheelArea {
+    top: 150px;
 }
 
-.vowel {
-  width: 150px;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.solve {
-  width: 150px;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.newGame {
-  width: 150px;
-  font-size: 1em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.players {
-    font-size: 1.5em;
-
-}
-
-.player1 {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    
-}
-
-.player2 {
-    position: absolute;
-    top: 100px;
-    right: 50px;
-}
-
-
-
-
-
-.highlight {
-  background-color: #FF4133;
-  color: #FF4133;
-  transform:rotateY(180deg);
-  cursor: pointer;
-}
-
-
-
-/* This styling sets the position of the wheel.  The margin is what centers it.
-// The webkit for the animation was found on stackoverflow.  It makes the wheel spin.
-// 
-// The webkit for transition was found from codepen.  It creates the circle border on the wheel.  
-
-*/
-
-
-
-}
 .wheel {
+    float: left;
     top: 0;
     left: 0;
     width: 500px;
@@ -110,7 +26,44 @@
     -ms-transition: transform 0.5s linear;
 }
 .wheelticker {
-    margin-left: 244px;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
     font-family: Arial;
     font-size: 45pt;
 }
+
+
+.gameControls button {
+    text-transform: uppercase;
+    z-index: 1000;
+    border: 4px double #fff;
+    background-color: #4153f4;
+    padding: 6px 14px;
+    color: white;
+    font-family: inherit;
+    font-size: 12pt;
+}
+
+#players {
+    position: relative;
+    padding: 10px;
+    border: 2px black solid;
+    width: 200px;
+    margin: 5px;
+    font-size: 14pt;
+}
+
+.instructions {
+    font-size: 2em;
+}
+
+#answer {
+    background-color: #4153f4;
+    padding: 1em 2em;
+    border-radius: 40px;
+    border: 4px double #fff;
+    
+}
+
+

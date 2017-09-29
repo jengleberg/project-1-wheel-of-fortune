@@ -7,8 +7,12 @@
 <body>  
   <div class="game">
 <h1 class="header">
-  <img src="images/header.png">
+  <img src="Images/header.png">
 </h1>
+<div class="wheelArea">
+<div class="wheelTicker">⇩</div>
+  <img  id="wheel" src="Images/Spin-Wheel.jpg" data-rotation="0">
+  </div>
 <div id="instructions">Type a letter (then press guess)
 <input id="guess" type="text">
 <button type="button" id="guessButton">Guess Letter</button>
@@ -16,16 +20,15 @@
 <p>
 <font size="+3"><span id="answer">puzzle loading..</span></font>
 </p>
-<div class="wheelTicker">⇩</div>
-  <img  id="wheel" src="Images/Spin-Wheel.jpg" data-rotation="0">
+
 
     <div id="players">
-      <div class="player-box">
+      <div class="playerBox">
         <input id="p1name" class="nameInput" placeholder="Player 1 Name"></input>
         <div id="p1score">0</div>
         <div id="p1bank">0</div>
       </div>
-      <div class="player-box">
+      <div class="playerBox">
         <input id="p2name" class="nameInput" placeholder="Player 2 Name"></input>
         <div id="p2-score">0</div>
         <div id="p2-bank">0</div>
