@@ -113,6 +113,13 @@ function updateScore (prize, numGuess, Bankrupt) {
 	}
 }
 
+<<<<<<< HEAD
  newGame.addEventListener("click", function(){
  	init();
  });
+=======
+// newGame function
+newGame.addEventListener("click", function() {
+	init();
+});
+>>>>>>> 6d35924b393dea1af9bfe67a16c73b2e178ca884
