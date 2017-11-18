@@ -12,22 +12,22 @@ var guessButton = document.getElementById("guessButton");
 
 
 // Game Variables
-var puzzles = ["javascript", "function", "html", "prototype", "binary", "psuedocode"];
+var puzzles = ["javascript", "function", "general-assembly", "prototype", "binary", "psuedocode"];
 var puzzle = "";
 var answers = [];
-var player1 = "Player 2";
-var player2 = "Player 1";
+var player1 = "Player 1";
+var player2 = "Player 2";
 var currentPlayer = player1;
 var pScore = {p1RoundScore: 0, p2RoundScore: 0};
 var round = 1;
 var prize = "";
 
 // Spin Results
-var spinValues = ['LoseTurn', '800', '350', '450', '700', '300', '600', '5000', '300', '600',
+spinValues = ['LoseTurn', '800', '350', '450', '700', '300', '600', '5000', '300', '600',
 				'300', '500', '800', '550', '400', '300', '900', '500', '300', '900', 'Bankrupt', '600', '400', '300'];
 
 // Function that pulls a random value from the spinValues array
- function spinAmount() {
+function spinAmount() {
 	 return spinValues[Math.floor((Math.random()*spinValues.length))];
 }
 
@@ -84,7 +84,7 @@ guessButton.addEventListener("click", function() {
 		}
 // if reamining letters in answer is zero the puzzle is solved		
 		if (remainingLetters == 0) {
-			showThisMessage = "YES! " + currentPlayer + " Solved the Puzzle!";
+			showThisMessage = "YES! Solved the Puzzle!";
 		} 
 // If incorrect guess display message and run next player function
 		if (showThisMessage === "") {
@@ -117,19 +117,3 @@ function updateScore (prize, numGuess, Bankrupt) {
 newGame.addEventListener("click", function() {
 	init();
 });
-
-
-var wheel = document.getElementById('wheel');
-wheel.addEventListener('click', onClick, false);
-
-
-function onClick() {
-    wheel.removeAttribute('style');
-    var deg = 500 + Math.round(Math.random() * 500);
-    var css = '-webkit-transform: rotate(' + deg + 'deg);';
-    wheel.setAttribute(
-    'style', css
-    );
-    
-
-}

@@ -8,30 +8,71 @@ body {
     height:100%;
 }
 
+/* Game area using the downloaded font */
+.game {
+    font-family:'Changa One' serif;
+}
+
 /* Align header image to page center */
 .header {
     text-align: center;
 }
 
-/* Game area using the downloaded font */
-.game {
-    font-family:'Changa One' serif;
-    font-size: 20px;
-    
+/* Positioning of the wheel and ticker */
+.wheelArea {
+    position: absolute;
+    left: 600px;
+    top: 225px;
 }
 
-.board {
-    position: fixed;
-    top: 75px;
-    left 50px;
-
+.wheelticker {
+    position: absolute;
+    left: 350px;
+    font-family: Arial;
+    font-size: 45pt;
 }
 
-/* Styling of guess input field */
-#guess {
-    font-size: 18pt;
-    border-radius: 2px;
+/* Webkit and styling for wheel.  Webkit creates the circular border for the wheel image and the spin animation */
+.wheel {
+    -webkit-animation:spin 24s infinite;
+    -moz-animation:spin 24s infinite;
+    animation:spin 24s infinite;
+    -moz-border-radius: 250px;
+    -webkit-border-radius: 250px;
+     border-radius: 250px;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -moz-transition: -moz-transform 0.5s linear;
+    -opera-transition: -opera-transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+}
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } 
 
+/* Padding for message area bottom */
+#message {
+    padding-bottom: 20px;
+}
+
+/* Styling for the game control buttons and position on page */
+.gameControls button {
+    position: relative;
+    left: 450px;
+    top: 310px;
+    text-transform: uppercase;
+    z-index: 1000;
+    border: 4px double #fff;
+    background-color: #4153f4;
+    padding: 6px 14px;
+    color: white;
+    font-family: inherit;
+    font-size: 12pt;
+}
+
+/* positioning of guess board */
+.guessBoard {
+    position: absolute;
+    top: 220px;
 }
 
 /* Styling of guess Button to match the game control buttons */
@@ -40,32 +81,29 @@ body {
     z-index: 1000;
     border: 4px double #fff;
     background-color: #4153f4;
-    padding: 20px 14px;
+    padding: 6px 14px;
     color: white;
     font-family: inherit;
     font-size: 12pt;
 }
 
-/* Where correct guesses appear */
-.answerBoard {
-    padding-top: 20px;
+/* Styling of guess input field */
+#guess {
+    font-size: 18pt;
+    border-radius: 2px;
 }
 
-/* Styling for the answer board */
-#answer {
-    background-color: #4153f4;
-    padding: 1em 2em;
-    border-radius: 40px;
-    border: 4px double #fff;
-    margin-bottom: 20px;
+/* Positioning and Styling of the Players Box */
+#players {
+    position: absolute;
+    bottom: 20px;
+    padding: 10px;
+    border: 2px black solid;
+    width: 350px;
+    margin: 5px;
+    font-size: 18pt;
+    background-color: #f4d142
 }
-
-#vanna {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-}
-
 
 /* Font size for name fields */
 .nameInput {
@@ -77,79 +115,14 @@ body {
     font-size: 2em;
 }
 
-
-/* Positioning and Styling of the Players Box */
-#players {
-    position: fixed;
-    top: 300px;
-    left: 30px;
-    padding: 10px;
-    border: 2px black solid;
-    width: 350px;
-    margin: 5px;
-    font-size: 18pt;
-    background-color: #f4d142
-}
-
-.playerBox {
-    text-align: left;
-}
-
-/* Styling for the game control buttons and position on page */
-.gameControls button {
-    position: relative;
-    text-transform: uppercase;
-    z-index: 1000;
-    border: 4px double #fff;
+/* Styling for the answer board */
+#answer {
     background-color: #4153f4;
-    padding: 6px 14px;
-    color: white;
-    font-family: inherit;
-    font-size: 12pt;
+    padding: 1em 2em;
+    border-radius: 40px;
+    border: 4px double #fff;
+    margin-bottom: 20px;
 }
-
-/* Positioning of the wheel and ticker */
-.wheelArea {
-    position: absolute;
-    left: 475px;
-    top: 230px;
-}
-
-.wheelticker {
-    position: fixed;
-    left: 550px;
-    font-family: Arial;
-    font-size: 45pt;
-}
-
-/* Webkit and styling for wheel.  Webkit creates the circular border for the wheel image and the spin animation */
-#wheel  {
-    top: 0;
-    left: 0;
-    width: 450px;
-    -moz-border-radius: 250px;
-    -webkit-border-radius: 250px;
-    border-radius: 250px;
-    -webkit-transition: -webkit-transform 0.5s linear;
-    -moz-transition: -moz-transform 0.5s linear;
-    -opera-transition: -opera-transform 0.5s linear;
-    -ms-transition: transform 0.5s linear;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
