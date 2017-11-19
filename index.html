@@ -2,42 +2,28 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <head>
-	<title>Wheel of Fortune</title>
+  <title>Wheel of Fortune</title>
 </head>
 <body> 
-<!--- Game container, master div --> 
-  <div class="game">
 <!--- Header section with Wheel of Fortune logo -->    
   <h1 class="header">
-    <img src="Images/header.jpg">
-<!-- Message display area -->
-    <p id="message">&nbsp;</p>
-  </h1>
-<!-- Wheel Area with spin wheel and ticker -->
-  <div class="wheelArea">
-  <div class="wheelTicker">⇩</div>
-  <img  id="wheel" src="Images/Spin-Wheel.jpg" data-rotation="0">
-  </div>
-  <!-- Buttons to control spin, vowel, solve and new game -->
-   <div class="gameControls">
-     <button type="button" id="spin" >Spin Wheel</button>
-     <button id="vowel">Buy a Vowel</button>
-     <button id="solve">Solve Puzzle</button>
-     <button id="newGame">New Game</button>
-  </div>
-  <!-- Guess area and puzzle board -->
+    <img src="Images/Header.png">
+<!--- Game container, master div --> 
+  <div class="game">
+       <!-- Guess area and puzzle board -->
   <div class="board">
-    <div class="guessBoard">
-    <div id="instructions">TYPE YOUR LETTER AND PRESS GUESS</div>
+    <div class="guessBoard"></div>
+    <div id="instructions" >TYPE YOUR LETTER AND PRESS GUESS</div>
     <input id="guess" type="text">
     <button type="button" id="guessButton">Guess</button>
-    </div>
-    <p>
+    <p class="answerBoard">
       <font size="+3"><span id="answer">puzzle loading..</span></font>
     </p>
   </div>
-  <!-- Players and score section -->
-    <div id="players">
+  <img id="vanna" src="Images/vanna-white.jpg">
+   <div id="players">
+    <!-- Message display area -->
+      <p id="message">&nbsp;</p>
       <div class="playerBox">
         <input id="p1name" class="nameInput" placeholder="Player 1 Name"></input>
         <div id="p1score">0</div>
@@ -49,6 +35,26 @@
         <div id="p2-bank">0</div>
       </div>
     </div>
+    <!-- Buttons to control spin, vowel, solve and new game -->
+   <div class="gameControls">
+     <button type="button" id="spin" >Spin Wheel</button>
+     <button id="vowel">Buy a Vowel</button>
+     <button id="solve">Solve Puzzle</button>
+     <button id="newGame">New Game</button>
+  </div>
+  </h1>
+<div class="clear"></div>
+<!-- Wheel Area with spin wheel and ticker -->
+  <div class="wheelArea">
+<!--   <div class="wheelTicker">⇩</div> -->
+  <img id="wheel" src="http://i.stack.imgur.com/hsfiy.jpg" data-rotation="0" >
+  </div>
+  
+ 
+
+
+  <!-- Players and score section -->
+   
   </div>  
 <script src="scripts/js_two.js"></script>
 </body>
