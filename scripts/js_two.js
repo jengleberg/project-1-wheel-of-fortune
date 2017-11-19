@@ -113,7 +113,34 @@ function updateScore (prize, numGuess, Bankrupt) {
 	}
 }
 
+
+ newGame.addEventListener("click", function(){
+ 	init();
+ });
+
+
+
 // newGame function
 newGame.addEventListener("click", function() {
 	init();
 });
+
+
+
+var wheel = document.getElementById('wheel');
+wheel.addEventListener('click', onClick, false);
+
+
+function onClick() {
+    wheel.removeAttribute('style');
+    var deg = 500 + Math.round(Math.random() * 500);
+    var css = '-webkit-transform: rotate(' + deg + 'deg);';
+    wheel.setAttribute(
+    'style', css
+    );
+    
+
+}
+
+
+
